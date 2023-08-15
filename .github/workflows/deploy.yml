@@ -26,6 +26,14 @@ concurrency:
   cancel-in-progress: true
 
 
+# Default to bash in login mode
+# https://github.com/mamba-org/provision-with-micromamba#IMPORTANT
+defaults:
+  run:
+    shell: "bash -l {0}"
+
+
+
 jobs:
   # Build job
   build:
