@@ -125,11 +125,22 @@ re-usable workflow is in the same organization or repository as the caller.
 :::
 
 
+## Re-usable workflow source
+
+[source](https://github.com/nsidc/.github/blob/main/.github/workflows/build-and-publish-container-image.yml)
+
+* The trigger event is `workflow_call`, which takes `inputs` and `secrets` as args
+* Everything else is nearly identical to the example workflow
+* ...except a bit of magic to automatically detect the calling repository's name:
+  * `IMAGE_NAME: "nsidc/${{ github.event.repository.name }}"`
+
+
 ## Starter workflows
 
-* Do not support passing arguments
-* Enable sharing workflow configuration text within the GitHub GUI
+* For "bootstrapping" a new workflow file
+* Enable sharing workflow configuration _text_ within the GitHub GUI
     * "Actions" -> "New workflow"
+* Do not support passing arguments
 * Can be defined at the org level by a combination of a YAML and JSON file in
   `my-org/.github` repo's `/workflow-templates` directory.
 
