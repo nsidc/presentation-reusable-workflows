@@ -72,7 +72,9 @@ jobs:
 ```
 
 ::: {.notes}
+Review `on` (triggers), `jobs` (groups of steps in the same execution env, and `steps`.
 :::
+
 
 ## Re-using with GitHub Actions
 
