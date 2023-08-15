@@ -123,3 +123,14 @@ would be used to pass arguments.
 `secrets: "inherit"` enables secrets to be passed to the workflow _only if_ the
 re-usable workflow is in the same organization or repository as the caller.
 :::
+
+
+## Starter workflows
+
+* Do not support passing arguments
+* Enable sharing workflow configuration text within the GitHub GUI
+    * "Actions" -> "New workflow"
+* Can be defined at the org level by a combination of a YAML and JSON file in
+  `my-org/.github` repo's `/workflow-templates` directory.
+
+[NSIDC's starter workflows](https://github.com/nsidc/.github/tree/main/workflow-templates)
