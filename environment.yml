@@ -1,0 +1,6 @@
+name: presentation
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - quarto
